@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#74c9e8">
+  <meta name="description" content="简洁的高考倒计时页面">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>高考倒计时</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://api.yppp.net">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div class="site-shell" id="siteShell">
+    <img class="backdrop" id="backdrop" src="https://api.yppp.net/pc.php" alt="随机背景" aria-hidden="true">
+    <div class="backdrop-wash" aria-hidden="true"></div>
+    <div class="grid-texture" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#countdown" aria-label="回到倒计时">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span class="brand-copy">
+          <strong>高考倒计时</strong>
+          <small>KEEP MOVING FORWARD</small>
+        </span>
+      </a>
+      <div class="top-actions">
+        <button class="icon-button" id="refreshBackground" type="button" title="刷新随机背景" aria-label="刷新随机背景">
+          <span aria-hidden="true">↻</span>
+        </button>
+        <button class="text-button" id="fullscreenButton" type="button">
+          <span class="button-icon" aria-hidden="true">⛶</span>
+          <span>全屏</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content" id="countdown">
+      <section class="countdown-panel" aria-labelledby="pageTitle">
+        <p class="eyebrow">2027 · GAOKAO COUNTDOWN</p>
+        <h1 id="pageTitle">距离高考还有</h1>
+        <p class="target-date">2027年6月7日 09:00 开始</p>
+        <div class="countdown" role="timer" aria-live="polite" aria-atomic="true">
+          <div class="time-unit">
+            <span class="time-value" id="days">000</span>
+            <span class="time-label">天</span>
+          </div>
+          <span class="time-separator" aria-hidden="true">:</span>
+          <div class="time-unit">
+            <span class="time-value" id="hours">00</span>
+            <span class="time-label">时</span>
+          </div>
+          <span class="time-separator" aria-hidden="true">:</span>
+          <div class="time-unit">
+            <span class="time-value" id="minutes">00</span>
+            <span class="time-label">分</span>
+          </div>
+          <span class="time-separator" aria-hidden="true">:</span>
+          <div class="time-unit">
+            <span class="time-value" id="seconds">00</span>
+            <span class="time-label">秒</span>
+          </div>
+        </div>
+        <p class="total-seconds"><span id="totalSeconds">0</span> <span>SECONDS REMAINING</span></p>
+        <div class="progress-section" aria-label="备考进度">
+          <div class="progress-heading">
+            <span>备考进度</span>
+            <strong id="progressPercent">0%</strong>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="从开始备考到高考的进度">
+            <span class="progress-fill" id="progressFill"></span>
+          </div>
+          <div class="progress-dates" aria-hidden="true">
+            <span>2026.08.30</span>
+            <span>2027.06.07</span>
+          </div>
+        </div>
+        <p class="quote" id="quote" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <span class="footer-label">友情链接</span>
+        <a href="https://www.rainyun.com/mldhao_" target="_blank" rel="noopener noreferrer">
+          <svg class="rainyun-icon" viewBox="0 0 28 22" aria-hidden="true" focusable="false">
+            <path d="M8.5 18.5h11.2a5.8 5.8 0 0 0 .7-11.55A8 8 0 0 0 5.3 8.1 5.25 5.25 0 0 0 8.5 18.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 20.5v-2M14 20.5v-2M19 20.5v-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span>雨云 Rainyun</span>
+        </a>
+      </div>
+      <div class="filings">
+        <span>ICP备案信息待填写</span>
+        <span>公安备案信息待填写</span>
+      </div>
+      <p class="copyright">愿你提笔高考征战四方，合笔谈笑清风无恙</p>
+    </footer>
+
+    <div class="fullscreen-controls" id="fullscreenControls">
+      <button class="fullscreen-control fullscreen-wallpaper" id="fullscreenWallpaper" type="button" title="换壁纸" aria-label="换壁纸">
+        <span aria-hidden="true">↻</span>
+        <span>换壁纸</span>
+      </button>
+      <button class="fullscreen-control fullscreen-exit" id="fullscreenExit" type="button" aria-label="退出全屏">
+        <span aria-hidden="true">×</span>
+        <span>退出全屏</span>
+      </button>
+    </div>
+    <div class="image-status" id="imageStatus" role="status" aria-live="polite"></div>
+  </div>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "高考倒计时",
+  "short_name": "高考倒计时",
+  "lang": "zh-CN",
+  "start_url": "./index.html#countdown",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#b7e9f8",
+  "theme_color": "#74c9e8",
+  "icons": []
+}
