@@ -81,26 +81,6 @@ python -m http.server 4173
 ### 颜色和透明度 Colors and opacity
 
 编辑 `assets/css/app.css` 顶部 CSS 变量以及 `.footer`、`.countdown-panel` 和全屏样式，可调整浅蓝色、白色文字、透明度和模糊效果。/ Tune the CSS variables and related selectors to adjust colors, opacity, and blur.
-
-## 发布到 GitHub Publishing to GitHub
-
-在 GitHub 新建一个空仓库（不要自动添加 README），然后在项目目录执行：
-
-Create an empty GitHub repository (without an auto-generated README), then run:
-
-```bash
-git init
-git add .
-git commit -m "feat: add static Gaokao countdown page"
-git branch -M main
-git remote add origin https://github.com/<YOUR_ACCOUNT>/<YOUR_REPOSITORY>.git
-git push -u origin main
-```
-
-如果使用 SSH，将远程地址替换为 `git@github.com:<YOUR_ACCOUNT>/<YOUR_REPOSITORY>.git`。/ For SSH, use the SSH remote instead.
-
-也可以启用 GitHub Pages：仓库 Settings → Pages → Deploy from a branch → `main` / `/ (root)`。
-
 You can also enable GitHub Pages from **Settings → Pages → Deploy from a branch → `main` / `/ (root)`**.
 
 备案文字目前是占位内容，请替换为真实备案号后再上线。
